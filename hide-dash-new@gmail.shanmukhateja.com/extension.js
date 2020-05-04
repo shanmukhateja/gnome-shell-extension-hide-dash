@@ -33,7 +33,7 @@ HideDash.prototype = {
 
 		// store the values we are going to override
 		this.old_x = this.getViewSelector().actor.x;
-		this.old_width = this.getViewSelector.actor.get_width();
+		this.old_width = this.getViewSelector().actor.get_width();
 	},
 	
 	enable: function() {
@@ -50,7 +50,7 @@ HideDash.prototype = {
 	hide: function() {
 		// global.log("show dash");
 		Main.overview._dash.actor.hide();
-		this.getViewSelector.actor.set_x(0);
+		this.getViewSelector().actor.set_x(0);
 		this.getViewSelector().actor.set_width(Main.overview._group.get_width());
 		this.getViewSelector().actor.queue_redraw();
 	},
